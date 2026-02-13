@@ -82,9 +82,6 @@ def split_data(df, target_col, train_size=0.6, random_state=42):
     
     return train, tune, test
 
-
-# %%
-
 def prep_college_pipeline(path: str, random_state=42):
     df = load_csv(path)
 
@@ -184,3 +181,4 @@ def prep_job_pipeline(path: str, random_state=42):
     test[num_cols]  = scaler.transform(test[num_cols])
 
     return train, tune, test
+# %%
